@@ -1,0 +1,15 @@
+21/11 08:46:34 FINER client.SimClient|creating agent instance of ExampleAgent
+21/11 08:46:34 FINE client.ServerConnection|(1) connecting to server localhost at port 6502
+21/11 08:46:34 FINE client.ServerConnection|(1) connected to server localhost
+21/11 08:46:34 FINEST client.ServerConnection|(1) sending Message[banjoklunjo,admin,adminContent[auth,[name=banjoklunjo,password=banjo,client.version=0.9.6]]]
+21/11 08:46:34 FINEST client.SimClient|(1) received adminContent[auth,[server.version=0.8.19]]
+21/11 08:46:34 FINER client.ServerConnection|(1) successfully logged in as banjoklunjo
+21/11 08:46:34 FINEST client.ServerConnection|(1) sending Message[banjoklunjo,admin,adminContent[server time,[]]]
+21/11 08:46:34 FINEST client.ServerConnection|(1) sending Message[banjoklunjo,admin,adminContent[join simulation,[]]]
+21/11 08:46:34 FINEST client.SimClient|(1) received adminContent[server time,[time=1574322394373]]
+21/11 07:46:34 FINEST client.SimClient|(1) received adminContent[join simulation,[type=tac06scm,startTime=1574322480000,role=PCManufacturer]]
+21/11 07:46:34 INFO client.SimClient|next simulation starts in 85 seconds
+21/11 07:46:34 INFO client.SimClient|[will reconnect in 1 minutes, 10 seconds]
+21/11 07:46:34 FINEST client.ServerConnection|(1) sending Message[banjoklunjo,admin,adminContent[quit,[]]]
+21/11 07:46:34 FINEST client.ServerConnection|(1) received Message[admin,banjoklunjo,adminContent[quit,[]]]
+21/11 07:46:34 FINE client.ServerConnection|(1) disconnected from server localhost
