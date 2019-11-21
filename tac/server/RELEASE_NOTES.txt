@@ -1,0 +1,29 @@
+TAC SCM server release notes for version 0.8.19
+4 September 2008
+
+This is the server that ran the 2008 competition, with one small
+exception: the code that generated the "adjusted ranking" is missing, because
+it was a last-minute hack that is not worthy of release at this point.
+
+There are no known high-priority issues with the server, except for an
+unconfirmed suspicion that the supplier price computation is not exactly
+as specified in the official game description.
+
+There are a few suggested enhancements that are not included in this release,
+including:
+- generation of the "adjusted ranking" for tournament results, using the
+  paired-sample t-test.
+- Update to the server-agent protocol to allow agents to inform the server
+  when they have finished sending their daily messages. This would be a
+  benefit for local experimentation, because it would allow fast agents to
+  complete games in significantly less than 55 minutes. It would also allow
+  experiments with slow agents, including agents with human controllers.
+- Separation of viewer load from agent interaction, using some sort of
+  proxy server. This has been suggested repeatedly as a way to improve server
+  performance in tournament play, but there is little evidence that viewer
+  load has a material effect on server latency as seen by agents. The ability
+  to offset the daily start times of multiple servers has significantly evened
+  out the network load for the hosting site, and reduced the need for a viewer
+  proxy function.
+- A richer visual interface for viewers, along the lines of the CMU 
+  log-analysis tool. 

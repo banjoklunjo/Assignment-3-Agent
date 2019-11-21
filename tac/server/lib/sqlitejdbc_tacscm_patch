@@ -1,0 +1,46 @@
+--- pristine/src/org/sqlite/MetaData.java	2008-03-15 23:11:23.000000000 -0500
++++ modified/src/org/sqlite/MetaData.java	2008-04-04 20:32:54.304295000 -0500
+@@ -340,7 +340,7 @@
+             + "null as TABLE_SCHEM, "
+             + "'" + escape(tbl) + "' as TABLE_NAME, "
+             + "cn as COLUMN_NAME, "
+-            + "-1 as DATA_TYPE, "
++            + "dt as DATA_TYPE, "
+             + "tn as TYPE_NAME, "
+             + "2000000000 as COLUMN_SIZE, "
+             + "2000000000 as BUFFER_LENGTH, "
+@@ -370,17 +370,32 @@
+             String colName = rs.getString(2);
+             String colType = rs.getString(3);
+             String colNotNull = rs.getString(4);
++            int colTypeEnum = 0;
+ 
+             int colNullable = 2;
+-            if (colType == null) colType = "TEXT";
+             if (colNotNull != null) colNullable = colNotNull.equals("0") ? 1:0;
+             if (colFound) sql += " union all ";
+             colFound = true;
+ 
++            // values taken from http://java.sun.com/j2se/1.4.2/docs/api/constant-values.html#java.sql.Types.INTEGER
++            colType = colType == null ? "TEXT" : colType.toUpperCase();
++            colTypeEnum = -1;
++            if (colType == "NULL")
++                colTypeEnum = Types.NULL;
++            else if (colType == "INTEGER" || colType == "INT")
++                colTypeEnum = Types.INTEGER;
++            else if (colType == "REAL" || colType == "FLOAT")
++                colTypeEnum = Types.DOUBLE;
++            else if (colType == "BLOB")
++                colTypeEnum = Types.BLOB;
++            else // includes TEXT
++                colTypeEnum = Types.VARCHAR;
++
+             sql += "select "
+                 + i + " as ordpos, "
+                 + colNullable + " as colnullable, '"
+-                + escape(colName) + "' as cn, '"
++                + escape(colName) + "' as cn, "
++                + colTypeEnum + " as dt, '"
+                 + escape(colType) + "' as tn";
+ 
+             if (colPat != null)
