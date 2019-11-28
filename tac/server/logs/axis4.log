@@ -1,0 +1,18 @@
+21/11 08:40:37 FINEST sql.SQLDatabase|scmdatabase: connecting to database jdbc:sqlite:scmdatabase (scmdatabase)
+21/11 08:40:37 INFO sql.SQLDatabase|scmdatabase: using database scmdatabase (SQLite 3.5.6)
+21/11 08:40:37 FINE sql.SQLDatabase|scmdatabase: added table users
+21/11 08:40:37 INFO common.BlockingViewerServer|viewer server started at *:4042
+21/11 08:40:37 FINE sql.SQLDatabase|scmdatabase: added table axis_state
+21/11 08:40:38 FINE sql.SQLDatabase|scmdatabase: added table axis_comingparticipants
+21/11 08:40:38 FINE sql.SQLDatabase|scmdatabase: added table axis_comingsimulations
+21/11 08:40:38 FINE sql.SQLDatabase|scmdatabase: added table axis_playedsimulations
+21/11 08:40:38 FINE sql.SQLDatabase|scmdatabase: added table axis_results
+21/11 08:40:38 FINE sql.SQLDatabase|scmdatabase: added table axis_competitionparts
+21/11 08:40:38 FINE sql.SQLDatabase|scmdatabase: added table axis_competitions
+21/11 08:40:38 FINE sql.SQLDatabase|scmdatabase: added table axis_competitionresults
+21/11 07:40:38 INFO sim.Admin|adding manager for simulation type tac06scm
+21/11 07:40:38 INFO server.TACTGateway|TACT Server started at *:6502
+21/11 07:46:34 FINEST tact.TACTConnection|tact-1: new connection from 127.0.0.1:39161
+21/11 07:46:34 INFO server.TACTChannel|user banjoklunjo logged in as banjoklunjo@tact-1 with version 0.9.6 from 127.0.0.1
+21/11 07:46:34 INFO sim.Admin|created simulation 1
+21/11 07:46:34 FINEST tact.TACTConnection|banjoklunjo@tact-1: connection closed from 127.0.0.1

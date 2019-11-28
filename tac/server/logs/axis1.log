@@ -1,0 +1,30 @@
+28/11 11:17:08 FINEST sql.SQLDatabase|scmdatabase: connecting to database jdbc:sqlite:scmdatabase (scmdatabase)
+28/11 11:17:09 INFO sql.SQLDatabase|scmdatabase: using database scmdatabase (SQLite 3.5.6)
+28/11 11:17:09 INFO common.BlockingViewerServer|viewer server started at *:4042
+28/11 10:17:09 INFO sim.Admin|adding manager for simulation type tac06scm
+28/11 10:17:09 INFO server.TACTGateway|TACT Server started at *:6502
+28/11 10:17:24 FINEST tact.TACTConnection|viewer-1: new connection from 127.0.0.1:55153
+28/11 10:17:24 FINER common.BlockingViewerChannel|logged in admin as admin@viewer-1 from 127.0.0.1
+28/11 10:17:47 FINEST tact.TACTConnection|tact-1: new connection from 127.0.0.1:53056
+28/11 10:17:47 INFO server.TACTChannel|user banjoklunjo logged in as banjoklunjo@tact-1 with version 0.9.6 from 127.0.0.1
+28/11 10:17:47 INFO sim.Admin|created simulation 3
+28/11 10:17:47 FINEST tact.TACTConnection|banjoklunjo@tact-1: connection closed from 127.0.0.1
+28/11 10:18:45 FINEST tact.TACTConnection|tact-2: new connection from 127.0.0.1:53057
+28/11 10:18:45 INFO server.TACTChannel|user banjoklunjo logged in as banjoklunjo@tact-2 with version 0.9.6 from 127.0.0.1
+28/11 10:19:00 FINE sim.Admin|Entering log for simulation 3
+************************************************************
+* Entering log for simulation 3
+************************************************************
+
+
+28/11 10:26:30 FINER sim.MessageDispatcher|message dispatcher sim3 stopped
+28/11 10:26:30 INFO is.TACSCMResultManager|generating results for simulation 3 to public_html/axis/history/3/index.html
+28/11 10:26:30 FINEST common.SimServer|adding simulation 3 to public_html/axis/history/simtable-1.html
+28/11 10:27:45 FINEST tact.TACTConnection|tact-3: new connection from 127.0.0.1:53058
+28/11 10:27:45 INFO server.TACTChannel|user banjoklunjo logged in as banjoklunjo@tact-3 with version 0.9.6 from 127.0.0.1
+28/11 10:28:00 FINE sim.Admin|Entering log for simulation 4
+************************************************************
+* Entering log for simulation 4
+************************************************************
+
+

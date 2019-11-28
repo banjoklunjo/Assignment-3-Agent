@@ -1,0 +1,5 @@
+28/11 11:15:16 FINEST sql.SQLDatabase|scmdatabase: connecting to database jdbc:sqlite:scmdatabase (scmdatabase)
+28/11 11:15:17 INFO sql.SQLDatabase|scmdatabase: using database scmdatabase (SQLite 3.5.6)
+28/11 11:15:17 INFO common.BlockingViewerServer|viewer server started at *:4042
+28/11 10:15:17 INFO sim.Admin|adding manager for simulation type tac06scm
+28/11 10:15:17 INFO server.TACTGateway|TACT Server started at *:6502

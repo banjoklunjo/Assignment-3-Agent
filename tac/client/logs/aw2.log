@@ -1,0 +1,20 @@
+28/11 11:15:10 FINER client.SimClient|creating agent instance of ExampleAgent
+28/11 11:15:10 FINE client.ServerConnection|(1) connecting to server localhost at port 6502
+28/11 11:15:10 SEVERE client.ServerConnection|(1) connection to server failed
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:208)
+	at se.sics.tasim.aw.client.ServerConnection.connect(ServerConnection.java:136)
+	at se.sics.tasim.aw.client.ServerConnection.run(ServerConnection.java:196)
+	at java.lang.Thread.run(Thread.java:745)
+28/11 11:15:10 SEVERE client.SimClient|************************************************************
+28/11 11:15:10 SEVERE client.SimClient|* Connection Failed
+28/11 11:15:10 SEVERE client.SimClient|* Could not connect to localhost (will retry in 30 seconds)
+28/11 11:15:10 SEVERE client.SimClient|************************************************************
