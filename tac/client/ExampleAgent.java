@@ -140,23 +140,21 @@ public class ExampleAgent extends SCMAgent {
 			// See the comments in the beginning of this file.
 			if ((dueDate - currentDate) >= 6 && (dueDate <= lastBidDueDate)) {
 
-				int resPrice = rfqBundle.getReservePricePerUnit(i);
-				int quantity = rfqBundle.getQuantity(i);
-				double penalty = rfqBundle.getPenalty(i);
-				int productId = rfqBundle.getProductID(i);
-
 				BOMBundle bomBundle = getBOMBundle();
-				int[] components = bomBundle
-						.getComponentsForProductID(productId);
-
-				int cost = bomBundle.getProductBasePrice(productId - 1);
-				int offeredPrice = (int) (resPrice * (1.0 - random.nextDouble()
+				
+				int reservedPriceUnit = rfqBundle.getReservePricePerUnit(i);
+				int offeredPrice = (int) (reservedPriceUnit * (1.0 - random.nextDouble()
 						* priceDiscountFactor));
 
-				double profit = (offeredPrice - cost) * quantity;
-				double div = (profit / penalty);
+				int productId = rfqBundle.getProductID(i);
+				int cost = bomBundle.getProductBasePrice(productId - 1);
+				int productQuantity = rfqBundle.getQuantity(i);
+				
+				double profit = (offeredPrice - cost) * productQuantity;
+				double lateDeliveryPenalty = rfqBundle.getPenalty(i);
+				double riskFactor = (profit / lateDeliveryPenalty);
 
-				if (div > 0.20) {
+				if (riskFactor > 0.20) {
 					addCustomerOffer(rfqBundle, i, offeredPrice);
 				}
 
